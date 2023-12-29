@@ -1,11 +1,12 @@
 // import options from '../../data/options.json';
-import styles from './FeedbackOptions.module.css';
+import style from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
       {options.map(option => (
         <button
+          className={style.button}
           key={option}
           type="button"
           name={option}

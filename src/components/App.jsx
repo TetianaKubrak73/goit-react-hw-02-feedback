@@ -3,6 +3,7 @@ import FeedbackOptions from '../components/FeedbackOptions/FeedbackOptions';
 import Statistics from '../components/Statistics/Statistics';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
+import style from 'App.module.css';
 
 export default class App extends Component {
   state = {
@@ -37,7 +38,7 @@ export default class App extends Component {
 
     const objKey = Object.keys(this.state);
     return (
-      <>
+      <div className={style.container}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={objKey}
@@ -55,10 +56,11 @@ export default class App extends Component {
               bad={bad}
               total={total}
               positivePercentage={positivePercentage}
+              div
             />
           </Section>
         )}
-      </>
+      </div>
     );
   }
 }
